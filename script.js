@@ -15,6 +15,7 @@ const theManImage = document.getElementById('the-man');
 let currentChapter = 1;
 let killed = false;
 let currentDialogueIndex = 0;
+let spaceHoldInterval;
 
 let chapter1 = [
   { text: "What a tiny apartment.", showJohn: true, bg: "images/Background/Bg1-5.png" },
@@ -94,7 +95,7 @@ let chapter2 = [
   { text: "“It feels like all this... this so-called ‘education’ was just a cruel joke. I'm not smart enough, not strong enough... I don’t know why I thought I could handle it.”", showJohnDim: true, showSmitty: true, bg: "images/Background/school3.png" },
   { text: "“It’s like the universe is telling me, ‘you’re not good enough, Smitty.’ And maybe… maybe it's right. Look at me, I’m still hanging onto the letter of rejection from ages ago…hoping and praying that it isn’t real…”", showJohnDim: true, showSmitty: true, bg: "images/Background/school3.png" },//[choice5 to say it was not a waste of time for him to be in university OR it might have been a waste of time] 
   { text: "“You should treasure your life more…”", showJohn: true, showSmittyDim: true, bg: "images/Background/school3.png" },
-  { text: "Choice 5", choices: ["Tell him it is a waste of time", "Tell him it wasn't a waste of time"], choiceHandler: handleChoice5}, //[choice5 to say it was not a waste of time for him to be in university]
+  { text: "Choice 5", choices: ["Tell him the truth", "Lie to him"], choiceHandler: handleChoice5}, //[choice5 to say it was not a waste of time for him to be in university]
   { text: "This is currently PlaceHolder text.. will it actually work??", showJohn: false, bg: "images/Background/school3.png" }, //PLACEHOLDER coconut.jpg
   { text: "“I’m sure it wasn’t a complete waste of time, there has to be something you’ve learnt right? I’m sure you’re able to succeed in other aspects of life!”", showJohn: true, showSmittyDim: true, bg: "images/Background/school3.png" },
   { text: "“False optimism…I knew you were a liar, but damn you sure are bad at it. Everyone said the same thing…but look where I am now and where they are!”", showJohnDim: true, showSmitty: true, bg: "images/Background/school3.png" },
@@ -182,16 +183,52 @@ let ending = [
   { text: "“Hey mom… I know it’s been a long time since I last visited… I couldn’t get over how I lost you so quickly to some stupid illness so I’ve been trying to find myself.”", hideAllCharacters: true, bg: "images/Background/grave.png" },
   { text: "(voice shaky) “I’m getting married next month. I have my life back on track. The company is starting to do well so I’ll be able to afford it.”", hideAllCharacters: true, bg: "images/Background/grave.png" },
   { text: "“I’ll bring you to a better place soon okay? Your own place. Love you Ma.”", hideAllCharacters: true, bg: "images/Background/grave.png" },
-  { text: "As I recall the rhyme of the crooked man.", hideAllCharacters: true, bg: "images/Background/black_screen.png", },
-  { text: "“There was a Crooked Man\nAnd he walked a Crooked Mile\nHe found a Crooked Sixpence upon a Crooked Stile”", hideAllCharacters: true, bg: "images/Background/black_screen.png", },
-  { text: "“He bought a Crooked Cat\nWho caught a Crooked Mouse\nAnd they all lived together in a little Crooked House”", hideAllCharacters: true, bg: "images/Background/black_screen.png", },
-  { text: "Everyone has their own Crooked Man haunting them.", hideAllCharacters: true, bg: "images/Background/black_screen.png", },
-  { text: "I used to think the Crooked Man only stood for death.", hideAllCharacters: true, bg: "images/Background/black_screen.png", },
-  { text: "But I think it represents an opportunity to change…to live…", hideAllCharacters: true, bg: "images/Background/black_screen.png", },
-  { text: "Because I think in the end…", hideAllCharacters: true, bg: "images/Background/black_screen.png", },
-  { text: "The Crooked Man was happy in his Crooked House.", hideAllCharacters: true, bg: "images/Background/black_screen.png", }
+  { text: "As I recall the rhyme of the crooked man.", hideAllCharacters: true, fadeInOut: true, bg: "images/Background/black_screen.png", },
+  { text: "“There was a Crooked Man\nAnd he walked a Crooked Mile\nHe found a Crooked Sixpence upon a Crooked Stile”", hideAllCharacters: true, fadeInOut: true, bg: "images/Background/black_screen.png", },
+  { text: "“He bought a Crooked Cat\nWho caught a Crooked Mouse\nAnd they all lived together in a little Crooked House”", hideAllCharacters: true, fadeInOut: true, bg: "images/Background/black_screen.png", },
+  { text: "Everyone has their own Crooked Man haunting them.", hideAllCharacters: true, fadeInOut: true, bg: "images/Background/black_screen.png", },
+  { text: "I used to think the Crooked Man only stood for death.", hideAllCharacters: true, fadeInOut: true, bg: "images/Background/black_screen.png", },
+  { text: "But I think it represents an opportunity to change…to live…", hideAllCharacters: true, fadeInOut: true, bg: "images/Background/black_screen.png", },
+  { text: "Because I think in the end…", hideAllCharacters: true, fadeInOut: true, bg: "images/Background/black_screen.png", },
+  { text: "The Crooked Man was happy in his Crooked House.", hideAllCharacters: true, fadeInOut: true, bg: "images/Background/black_screen.png", }
 ];
 
+document.addEventListener('DOMContentLoaded', () => {
+  const disclaimerScreen = document.getElementById('disclaimer-screen');
+  const agreeButton = document.getElementById('agree-button');
+
+  agreeButton.addEventListener('click', () => {
+    disclaimerScreen.style.display = 'none';
+    playAmbientSound();
+    startDialogue();
+  });
+});
+
+function playAmbientSound() {
+  const audio = new Audio('path/to/ambient-sound.mp3'); // Replace with actual path
+  audio.loop = true;
+  audio.play().catch((error) => {
+    console.error("User interaction required to play audio", error);
+  });
+}
+
+
+function simulateClick() {
+  document.body.click(); // Triggers the click event on the body
+}
+
+document.addEventListener('keydown', (event) => {
+  if (event.code === 'Space' && !spaceHoldInterval) {
+    spaceHoldInterval = setInterval(simulateClick, 10);  // Adjust speed as needed
+  }
+});
+
+document.addEventListener('keyup', (event) => {
+  if (event.code === 'Space') {
+    clearInterval(spaceHoldInterval);
+    spaceHoldInterval = null;
+  }
+});
 
 function updateVisuals(dialogue) {
   if (dialogue.hideAllCharacters) {
@@ -337,7 +374,7 @@ function handleChoice7(choice) {
   startDialogue3(); 
 }
 
-document.body.addEventListener('click', () => {
+dialogueBox.addEventListener('click', () => {
   if (choicesContainer.style.display === 'none') {
     currentDialogueIndex++;
     
@@ -376,6 +413,7 @@ document.body.addEventListener('click', () => {
 
 function startDialogue() {
   const dialogue = chapter1[currentDialogueIndex];
+
   dialogueText.innerText = dialogue.text;
   updateVisuals(dialogue);
   handleChoices(dialogue);
@@ -385,6 +423,7 @@ function startDialogue() {
 function startDialogue2() {
   const dialogue = chapter2[currentDialogueIndex];
   dialogueText.innerText = dialogue.text;
+
   updateVisuals(dialogue);
   handleChoices(dialogue);
   handleEffects(dialogue);
@@ -392,6 +431,7 @@ function startDialogue2() {
 function startDialogue3() {
   const dialogue = chapter3[currentDialogueIndex];
   dialogueText.innerText = dialogue.text;
+  
   updateVisuals(dialogue);
   handleChoices(dialogue);
   handleEffects(dialogue);
@@ -402,6 +442,15 @@ function startEnding() {
   
   if (dialogue) {
     dialogueText.innerText = dialogue.text;
+    
+    if (dialogue.fadeInOut) {
+      dialogueText.classList.remove('fade-in-out');
+      void dialogueText.offsetWidth; 
+      dialogueText.classList.add('fade-in-out'); 
+    } else {
+      dialogueText.classList.remove('fade-in-out');
+    }
+  
     updateVisuals(dialogue);
     handleEffects(dialogue);
   }
