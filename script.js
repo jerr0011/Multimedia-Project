@@ -46,15 +46,19 @@ let chapter1 = [
   { text: "“Well…I lived here before…and my boyfriend…”", showJohnDim: true, showCrybaby: true, bg: "images/Background/Bg1-5.png" },
   { text: "Her voice trailed off before she started sobbing.", showJohnDim: true, showCrybabyDim: true, bg: "images/Background/Bg1-5.png" },
   { text: "Choice 1", choices: ["Comfort her", "Wait for her to be done crying"], bg: "images/Background/Bg1-5.png", choiceHandler: handleChoice1 },
+  { text: "This is currently PlaceHolder text.. will it actually work??", showJohn: false, bg: "images/Background/Bg1-5.png" }, //PLACEHOLDER coconut.jpg
   { text: "Through her tears and babbling, she explained that she broke up with her boyfriend and was just looking for the necklace she had lost. She sees the messy state of the room and implores me to help her search.", showJohnDim: true, showCrybabyDim: true, bg: "images/Background/Bg1-5.png" },
   { text: "Choice 2", choices: ["Help the girl look for it", "Turn her away"], bg: "images/Background/Bg1-5.png", choiceHandler: handleChoice2 },
+  { text: "This is currently PlaceHolder text.. will it actually work??", showJohn: false, bg: "images/Background/Bg1-5.png" }, //PLACEHOLDER coconut.jpg
   { text: "After a while of searching, I find it in the drawer of my nightstand and hand it to her, and she tears up before bawling again.", showJohnDim: true, showCrybabyDim: true, bg: "images/Background/Bg1-5.png" },
   { text: "I nicknamed her Crybaby, not knowing her real name, and listened attentively to her.", showJohnDim: true, showCrybabyDim: true, bg: "images/Background/Bg1-5.png" },
   { text: "“My boyfriend left me because I was such a crybaby, I was always too emotional and sensitive. Even now, after he left, I’m still stuck here crying even though he probably has moved on! I hate how I’m always crying!”", showJohnDim: true, showCrybaby: true, bg: "images/Background/Bg1-5.png" },
   { text: "Choice 3", choices: ["Tell her to be brave", "Tell her it is okay to cry"], bg: "images/Background/Bg1-5.png", choiceHandler: handleChoice3 },
+  { text: "This is currently PlaceHolder text.. will it actually work??", showJohn: false, bg: "images/Background/Bg1-5.png" }, //PLACEHOLDER coconut.jpg
   { text: "“Such a crybaby. Everything in life can be solved as long as you think about it carefully. There is nothing that crying can solve, if he has moved on, so should you. You need to be brave in life!”", showJohn: true, showCrybabyDim: true, bg: "images/Background/Bg1-5.png" },
   { text: "The door creaks open, revealing a figure with a bent neck, so bent that the top of its head almost reached its shoulders. In the flash, it grabbed Crybaby, and before she could utter another word, the door slammed shut. I tried knocking down the door, but it would not budge. All I could hear was the shrill screaming and crying of a girl, then it all went silent. I shook myself from my shock and saw the letter on the floor, picking it up before the door creaks open again.", hideAllCharacters: true, showTheMan: true, flashRed: true },
   { text: "I ran as fast as my legs could take me, away from my apartment, away from the monster, but towards the place mentioned in the letter. My old university.", hideAllCharacters: true, bg: "images/Background/Bg1-5.png", endgame:true},
+  { text: "“You’re right. It’s alright to cry. I wish he was half as understanding as you. You woke me up from my daze. Haha…what’s with that nickname…thank you for that! I’ll never forget you!”", showJohn: true, showCrybabyDim: true, bg: "images/Background/Bg1-5.png" },
   { text: "“You’re right. It’s alright to cry, but I’m glad someone as kind as you were able to tell me that. You woke me up from my daze. Haha…what’s with that nickname…thank you for that! I’ll never forget you!”", showJohnDim: true, showCrybaby: true, bg: "images/Background/Bg1-5.png" },
   { text: "Crybaby hands me a letter that she said she found under my bed and pecked me on the cheek before leaving. The door suddenly creaks open, revealing a figure with a bent neck, so bent that the top of its head almost reached its shoulders, with a smile equally as malevolent as its presence. I gripped the letter so tightly that my knuckles turned white.", hideAllCharacters: true, showTheMan: true, darkenBg: true },
   { text: "I ran as fast as my legs could take me, away from my apartment, away from the monster, but towards the place mentioned in the letter. My old university.", hideAllCharacters: true, bg: "images/Background/Bg1-5.png" }
@@ -82,6 +86,7 @@ let chapter2 = [
   { text: "The moonlight shined upon his visibly tired complexion and unkempt brown hair.", showJohnDim: true, showSmittyDim: true, bg: "images/Background/school3.png"},
   { text: "“Jesus…I thought I ran into a ghost…I’m Smitty, who are you? What are you doing here?”", showJohnDim: true, showSmitty: true, bg: "images/Background/school3.png" },
   { text: "Choice 4", choices: ["Tell him the Truth", "Lie that you are lost"], choiceHandler:handleChoice4}, //C4 [choice4 to tell him the truth or lie saying that he is lost]
+  { text: "This is currently PlaceHolder text.. will it actually work??", showJohn: false, bg: "images/Background/school3.png" }, //PLACEHOLDER coconut.jpg
   { text: "“You really expect me to believe that…? It’s fine, you don’t seem like a dangerous person after all.”", showJohnDim: true, showSmitty: true, bg: "images/Background/school3.png" },
   { text: "“Well that’s my story, what about you?”", showJohn: true, showSmittyDim: true, bg: "images/Background/school3.png" },
   { text: "I could see him wince at the question and hesitate for a short moment.", showJohnDim: true, showSmittyDim: true, bg: "images/Background/school3.png" },
@@ -91,6 +96,7 @@ let chapter2 = [
   { text: "“It’s like the universe is telling me, ‘you’re not good enough, Smitty.’ And maybe… maybe it's right. Look at me, I’m still hanging onto the letter of rejection from ages ago…hoping and praying that it isn’t real…”", showJohnDim: true, showSmitty: true, bg: "images/Background/school3.png" },//[choice5 to say it was not a waste of time for him to be in university OR it might have been a waste of time] 
   { text: "“You should treasure your life more…”", showJohn: true, showSmittyDim: true, bg: "images/Background/school3.png" },
   { text: "Choice 5", choices: ["Tell him the truth", "Lie to him"], choiceHandler: handleChoice5}, //[choice5 to say it was not a waste of time for him to be in university]
+  { text: "This is currently PlaceHolder text.. will it actually work??", showJohn: false, bg: "images/Background/school3.png" }, //PLACEHOLDER coconut.jpg
   { text: "“I’m sure it wasn’t a complete waste of time, there has to be something you’ve learnt right? I’m sure you’re able to succeed in other aspects of life!”", showJohn: true, showSmittyDim: true, bg: "images/Background/school3.png" },
   { text: "“False optimism…I knew you were a liar, but damn you sure are bad at it. Everyone said the same thing…but look where I am now and where they are!”", showJohnDim: true, showSmitty: true, bg: "images/Background/school3.png" },
   { text: "“I’m just a joke…still here reminiscing the past…I hate this…I hate reality…”", showJohnDim: true, showSmitty: true, bg: "images/Background/school3.png" },
@@ -102,6 +108,7 @@ let chapter2 = [
   { text: "It was here again.", hideAllCharacters: true, bg:"images/Background/school3.png" },
   { text: "I took one quick glance at the letter that Smitty dropped.", hideAllCharacters: true, bg:"images/Background/school3.png" },
   { text: "It contained only two words - “COME HOME”, but I knew where I had to go as I accelerated my pace under the moonlight.", hideAllCharacters: true, bg:"images/Background/school3.png" ,fastforward1:true},
+  { text: "This is currently PlaceHolder text.. will it actually work??", showJohn: false, bg: "images/Background/school3.png" }, //PLACEHOLDER coconut.jpg
   { text: "“Yeah…it may have been a waste of time. I’m sure there are other things that could have been done during that time. I know because I’m the same.”",showJohn: true, showSmittyDim: true, bg: "images/Background/school3.png"}, 
   { text: "“I spent my youth wasting my time even when I knew I couldn’t make it. I should have tried other things. I should have experimented with what I could do.”", showJohn: true, showSmittyDim: true, bg: "images/Background/school3.png" },
   { text: "“Maybe it’s not too late Smitty.”", showJohn: true, showSmittyDim: true, bg: "images/Background/school3.png" },
@@ -136,11 +143,13 @@ let chapter3 = [
   { text: "Choice 6", choices: ["Explain about the monster", "Tell her about Crybaby and Smitty"], bg: "images/Background/iminyourwalls.png", choiceHandler: handleChoice6 },
   // Branching path based on Choice 6
   // CHOICE explain about the monster
+  { text: "This is currently PlaceHolder text.. will it actually work??", showJohn: false, bg: "images/Background/school3.png" }, //PLACEHOLDER coconut.jpg
   { text: "“I…I know it sounds crazy, but I think something’s been chasing me. A monster. It sounds impossible, I know…”", showJohn: true, showAngelineDim:true, bg: "images/Background/iminyourwalls.png"},
   { text: "My stuttering did not help my case as Angeline laughed softly.", showJohnDim:true, showAngelineDim: true, bg: "images/Background/iminyourwalls.png"},
   { text: "“A monster? Sounds like you’ve had one too many drinks and ended up imagining things, young man.”", showJohnDim:true, showAngeline: true, bg: "images/Background/iminyourwalls.png" },
   { text: "Almost as if on cue to prove her wrong, the door bursts open, revealing the terrifying figure of the monster.", hideAllCharacters: true, showTheMan: true, bg: "images/Background/iminyourwalls.png" },
   { text: "Screams could only be heard, as everything falls silent once again.", hideAllCharacters: true, bg: "images/Background/iminyourwalls.png", endgame:true },
+  { text: "This is currently PlaceHolder text.. will it actually work??", showJohn: false, bg: "images/Background/school3.png" }, //PLACEHOLDER coconut.jpg
   // CHOICE tell her about Crybaby and Smitty
   { text: "“I… well, it’s hard to explain. I met two people tonight. It feels like I’m reliving something… like my own life again…”", showJohn: true, showAngelineDim:true, bg: "images/Background/iminyourwalls.png", condition: "choice6 == 2" },
   { text: "I recounted the stories of Crybaby and Smitty to Angeline, as she listens quietly, her expression softening.", showJohnDim:true, showAngelineDim:true, bg: "images/Background/iminyourwalls.png", condition: "choice6 == 2" },
@@ -154,6 +163,8 @@ let chapter3 = [
   { text: "Angeline touches my arm gently.", showJohnDim:true, showAngelineDim:true, bg: "images/Background/iminyourwalls.png" },
   { text: "“You’re welcome to stay here and rest. Maybe this place can give you the shelter you’re looking for.”", showJohnDim:true, showAngeline: true, bg: "images/Background/iminyourwalls.png", killedchoice:true  },
   { text: "Choice 7", choices: ["Accept her offer to stay", "Politely reject and leave"], bg: "images/Background/iminyourwalls.png", choiceHandler: handleChoice7},
+  { text: "This is currently PlaceHolder text.. will it actually work??", showJohn: false, bg: "images/Background/school3.png" }, //PLACEHOLDER coconut.jpg
+
   // Branching path based on Choice 7
   // CHOICE accept her offer
   { text: "“I’ll take you up on that offer.”", showJohn: true, showAngelineDim:true, bg: "images/Background/iminyourwalls.png" },
@@ -182,6 +193,7 @@ let ending = [
   { text: "The Crooked Man was happy in his Crooked House.", hideAllCharacters: true, fadeInOut: true, bg: "images/Background/black_screen.png", }
 ];
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const disclaimerScreen = document.getElementById('disclaimer-screen');
   const agreeButton = document.getElementById('agree-button');
@@ -194,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function playAmbientSound() {
-  const audio = new Audio('path/to/ambient-sound.mp3'); // Replace with actual path
+  const audio = new Audio('/images/Audio/Ambience.mp3'); // Replace with actual path (Bunch of dumdums didnt update this line :<)
   audio.loop = true;
   audio.play().catch((error) => {
     console.error("User interaction required to play audio", error);
@@ -352,7 +364,7 @@ function handleChoice7(choice) {
   startDialogue3(); 
 }
 
-dialogueBox.addEventListener('click', () => {
+document.body.addEventListener('click', () => {
   if (choicesContainer.style.display === 'none') {
     currentDialogueIndex++;
     
