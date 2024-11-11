@@ -286,6 +286,7 @@ function handleEffects(dialogue) {
 }
 
 function handleChoice1(choice) {
+  currentDialogueIndex++;
   startDialogue();
 }
 
@@ -297,7 +298,6 @@ function handleChoice2(choice) {
     startDialogue(); // Continue with the next dialogue
   } else {
     // User chooses to turn her away
-    console.log(currentDialogueIndex);
     chapter1[29].text = "*Sniffling* You’re so mean, pretty please";
     // Display choices again to give the user another opportunity to choose
     currentDialogueIndex -= 1;
@@ -311,6 +311,7 @@ function handleChoice2(choice) {
 function handleChoice3(choice) {
   if (choice === 1) {
     killed = true;
+    currentDialogueIndex++;
     console.log("crybaby dead");
   } else {
     currentDialogueIndex += 4;
@@ -319,6 +320,7 @@ function handleChoice3(choice) {
 }
 
 function handleChoice4(choice){
+  currentDialogueIndex++;
   startDialogue2();
 }
 
@@ -326,6 +328,7 @@ function handleChoice4(choice){
 function handleChoice5(choice) {
   if (choice === 2) {
     killed = true
+    CurrentDialogueIndex++;
     console.log("smitty dead");
   } else {
     currentDialogueIndex += 12; //Skips to truth portion
@@ -336,15 +339,15 @@ function handleChoice5(choice) {
 function handleChoice6(choice) {
   if (choice === 2) {
      currentDialogueIndex += 6; 
-  } 
+  } else (currentDialogueIndex++;)
   startDialogue3();
 }
 function handleChoice7(choice) {
   if (!killed) {
     if (choice === 2) {
       currentDialogueIndex += 4;
-    }
-  }
+    } else {currentDialogueIndex++;}
+  }else{currentDialogueIndex++;}
   
   startDialogue3(); 
 }
