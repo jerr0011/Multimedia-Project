@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function playAmbientSound() {
-  const audio = new Audio('Multimedia-Project/images/Audio/Ambience.mp3'); // Replace with actual path (Bunch of dumdums didnt update this line :<)
+  const audio = new Audio('images/Audio/Ambience.mp3'); // Replace with actual path (Bunch of dumdums didnt update this line :<)
   audio.loop = true;
   audio.play().catch((error) => {
     console.error("User interaction required to play audio", error);
