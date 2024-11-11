@@ -339,7 +339,7 @@ function handleChoice5(choice) {
 function handleChoice6(choice) {
   if (choice === 2) {
      currentDialogueIndex += 6; 
-  } else (currentDialogueIndex++;)
+  } else {currentDialogueIndex++;}
   startDialogue3();
 }
 function handleChoice7(choice) {
