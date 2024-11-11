@@ -312,7 +312,7 @@ function handleChoice2(choice) {
     // User chooses to turn her away
     chapter1[29].text = "*Sniffling* You’re so mean, pretty please";
     // Display choices again to give the user another opportunity to choose
-    currentDialogueIndex -= 1;
+    currentDialogueIndex -= 2;
     startDialogue();
 
   }
@@ -326,7 +326,7 @@ function handleChoice3(choice) {
     currentDialogueIndex++;
     console.log("crybaby dead");
   } else {
-    currentDialogueIndex += 4;
+    currentDialogueIndex += 5;
   }
   startDialogue();
 }
@@ -343,21 +343,21 @@ function handleChoice5(choice) {
     currentDialogueIndex++;
     console.log("smitty dead");
   } else {
-    currentDialogueIndex += 12; //Skips to truth portion
+    currentDialogueIndex += 13; //Skips to truth portion
   }
   startDialogue2();
 }
 
 function handleChoice6(choice) {
   if (choice === 2) {
-     currentDialogueIndex += 6; 
+     currentDialogueIndex += 7; 
   } else {currentDialogueIndex++;}
   startDialogue3();
 }
 function handleChoice7(choice) {
   if (!killed) {
     if (choice === 2) {
-      currentDialogueIndex += 4;
+      currentDialogueIndex += 5;
     } else {currentDialogueIndex++;}
   }else{currentDialogueIndex++;}
   
