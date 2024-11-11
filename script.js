@@ -328,7 +328,7 @@ function handleChoice4(choice){
 function handleChoice5(choice) {
   if (choice === 2) {
     killed = true
-    CurrentDialogueIndex++;
+    currentDialogueIndex++;
     console.log("smitty dead");
   } else {
     currentDialogueIndex += 12; //Skips to truth portion
